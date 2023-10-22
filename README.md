@@ -1,7 +1,7 @@
 # WHATSAPP-AUTO-SENDER
-## <center>**WA-AUTOSENDER</center>
+## <center>WA-AUTOSENDER</center>
 
-**WA-AUTOSENDER is a whatsapp gateway application that allows us to send whatsapp messages through the website, using Api. there are several other features in WA Lazy such as Broadcast, Campaign, Rest Api, Auto Responder
+WA-AUTOSENDER is a whatsapp gateway application that allows us to send whatsapp messages through the website, using Api. there are several other features in WA-AUTOSENDER such as Broadcast, Campaign, Rest Api, Auto Responder
 <br>
 
 ```php
