@@ -1,7 +1,7 @@
 # WHATSAPP-AUTO-SENDER
 ## <center>WA-AUTOSENDER</center>
 
-WA-AUTOSENDER is a whatsapp gateway application that allows us to send whatsapp messages through the website, using Api. there are several other features in WA-AUTOSENDER such as Broadcast, Campaign, Rest Api, Auto Responder
+WA-AUTOSENDER adalah aplikasi whatsapp gateway yang memungkinkan kita mengirim pesan whatsapp melalui website, menggunakan Api. masih ada beberapa fitur lain yang ada di WA-AUTOSENDER seperti Broadcast, Campaign, Rest Api, Auto Responder
 <br>
 
 ```php
