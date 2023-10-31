@@ -4,7 +4,7 @@
             <span class="app-brand-logo demo" style="height: unset">
                 <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="walix">
             </span>
-            <span class="app-brand-text demo menu-text fw-bold">WALazy</span>
+            <span class="app-brand-text demo menu-text fw-bold">WA-CYBEROREN</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
