@@ -61,7 +61,7 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-1 pt-2">Welcome to WALIX! 👋</h4>
+                        <h4 class="mb-1 pt-2">Welcome to CYBEROREN! 👋</h4>
                         <p class="mb-4">Please sign-in to your account!</p>
 
                         <form class="mb-3" action="{!! route('login') !!}" method="POST">
