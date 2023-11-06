@@ -31,7 +31,7 @@ if (file_exists($maintenance = __DIR__ . '/../core/storage/framework/maintenance
 |
 */
 
-/* s
+/* h
 
 */
 
