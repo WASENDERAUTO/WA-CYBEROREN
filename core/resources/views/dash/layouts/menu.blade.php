@@ -35,7 +35,7 @@
         <li class="menu-item {{ Route::is('responder*') ? 'active' : '' }}">
             <a href="{!! route('responder') !!}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-message-2-code" style="margin-bottom: 2px;"></i>
-                <div data-i18n="Auto Responders">Auto Responders</div>
+                <div data-i18n="Auto Responders">Chatbot</div>
             </a>
         </li>
         <li class="menu-item {{ Route::is('phonebook*') ? 'active' : '' }}">
