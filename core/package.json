@@ -1,7 +1,7 @@
 {
     "name": "Pengembangan Whatsapp dengan penggunaan API dan Micro Frontends untuk pemasaran Interkatif",
     "version": "4.0.0",
-    "description": "Whatsapp Gateway Sever By Velixs",
+    "description": "Whatsapp Gateway Sever By CYBEROREN",
     "main": "index.js",
     "type": "commonjs",
     "directories": {
@@ -13,9 +13,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ilsyaa"
+        "url": "https://github.com/jxxzy"
     },
-    "author": "velixs-ilsyaa",
+    "author": "cyberoren-jxxzy",
     "license": "ISC",
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
