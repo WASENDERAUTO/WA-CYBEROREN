@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>LOGIN - LAZY GATEWAY</title>
+    <title>LOGIN - CYBEROREN GATEWAY</title>
 
     <meta name="description" content="LAZY GATEWAY" />
 
@@ -61,7 +61,7 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-1 pt-2">Welcome to WALIX! 👋</h4>
+                        <h4 class="mb-1 pt-2">Welcome to WAREN! 👋</h4>
                         <p class="mb-4">Please sign-in to your account!</p>
 
                         <form class="mb-3" action="{!! route('login') !!}" method="POST">
