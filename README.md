@@ -36,3 +36,24 @@ Dengan menggunakan Micro Frontends, sistem akan lebih mudah diperluas dan disesu
 Keamanan dan privasi pengguna akan menjadi prioritas utama dalam pengembangan proyek ini. Data pengguna harus dijaga dengan baik, dan interaksi dengan WhatsApp harus mematuhi aturan dan kebijakan yang berlaku.
 
 Proyek Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Frontends adalah upaya untuk meningkatkan cara pengguna berkomunikasi dengan WhatsApp dan memaksimalkan potensi chatbot untuk berbagai keperluan. Dengan integrasi yang kuat, kecerdasan buatan, dan fokus pada pengalaman pengguna, proyek ini diharapkan dapat memberikan solusi yang inovatif dan efektif dalam berinteraksi dengan platform pesan populer seperti WhatsApp.
+
+## ⚠️ Developers
+  <div align="center">
+  
+| [!) |
+|----|
+| [꧁𓊈𒆜C Y B E R O R E N𒆜𓊉꧂](https://github.com/jxxzy) |
+|  𒆜Bug Fixes, Modules, updates𒆜 |
+  
+  </div>
+
+## ❗ Warning
+WhatsApp bot is still in the development stage, so there are a few bugs
+WhatsApp Connection (BETA, not working perfectly)
+
+Get Apikey WAREN on [`CYBREOREN`](https://wasenderauto.github.io/Proposal-P3/)
+
+
+## ⚠️ Thanks To
+* [`JXXZY`](https://github.com/jxxzy)
+* [`NYAIII`](https://github.com/marjuniatiputri)
