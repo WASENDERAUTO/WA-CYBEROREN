@@ -29,7 +29,7 @@ Untuk memastikan skalabilitas dan fleksibilitas, proyek ini akan menggunakan kon
 # Pengalaman Pengguna yang Lebih Baik:
 Tujuan utama proyek ini adalah memberikan pengalaman pengguna yang lebih baik ketika berinteraksi dengan WhatsApp. Chatbot yang cerdas dan kemampuan integrasi dengan API akan mempercepat respon dan memberikan akses ke berbagai informasi dan layanan dengan mudah.
 
-# Skalabilitas dan Fleksibilitas:
+Skalabilitas dan Fleksibilitas:
 Dengan menggunakan Micro Frontends, sistem akan lebih mudah diperluas dan disesuaikan dengan kebutuhan masa depan. Ini akan memungkinkan penambahan fitur baru, integrasi dengan layanan pihak ketiga, dan peningkatan kinerja dengan lebih mudah.
 
 Keamanan dan Privasi:
