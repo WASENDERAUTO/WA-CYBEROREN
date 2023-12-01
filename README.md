@@ -12,10 +12,9 @@ WA-AUTOSENDER adalah aplikasi whatsapp gateway yang memungkinkan kita mengirim p
 - NodeJS 14 or higher (16.16.0 recommended)
 ```
 
-
 Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Frontends adalah sebuah proyek yang bertujuan untuk memberikan pengalaman pengguna yang lebih baik dalam berinteraksi dengan WhatsApp melalui chatbot. Ini adalah deskripsi umum tentang proyek tersebut:
 
-Deskripsi Proyek:
+# Deskripsi Proyek:
 Pengembangan WhatsApp Sender ini adalah solusi yang akan memungkinkan pengguna untuk berkomunikasi dengan WhatsApp melalui chatbot yang cerdas dan efisien. Proyek ini akan memanfaatkan berbagai teknologi termasuk API dan Micro Frontends untuk mencapai tujuan ini.
 
 Chatbot Cerdas: Chatbot yang dikembangkan akan mampu memahami pesan dari pengguna, menjawab pertanyaan, memberikan informasi, dan menjalankan tindakan yang diminta oleh pengguna. Ini akan memungkinkan pengguna untuk melakukan berbagai tugas melalui WhatsApp, seperti memesan produk, mendapatkan informasi, atau berinteraksi dengan layanan perusahaan.
