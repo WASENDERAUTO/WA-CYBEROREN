@@ -32,7 +32,7 @@ Tujuan utama proyek ini adalah memberikan pengalaman pengguna yang lebih baik ke
 # Skalabilitas dan Fleksibilitas:
 Dengan menggunakan Micro Frontends, sistem akan lebih mudah diperluas dan disesuaikan dengan kebutuhan masa depan. Ini akan memungkinkan penambahan fitur baru, integrasi dengan layanan pihak ketiga, dan peningkatan kinerja dengan lebih mudah.
 
-Keamanan dan Privasi:
+# Keamanan dan Privasi:
 Keamanan dan privasi pengguna akan menjadi prioritas utama dalam pengembangan proyek ini. Data pengguna harus dijaga dengan baik, dan interaksi dengan WhatsApp harus mematuhi aturan dan kebijakan yang berlaku.
 
 Proyek Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Frontends adalah upaya untuk meningkatkan cara pengguna berkomunikasi dengan WhatsApp dan memaksimalkan potensi chatbot untuk berbagai keperluan. Dengan integrasi yang kuat, kecerdasan buatan, dan fokus pada pengalaman pengguna, proyek ini diharapkan dapat memberikan solusi yang inovatif dan efektif dalam berinteraksi dengan platform pesan populer seperti WhatsApp.
