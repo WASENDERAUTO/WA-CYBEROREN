@@ -17,7 +17,8 @@ Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Fr
 # Deskripsi Proyek:
 Pengembangan WhatsApp Sender ini adalah solusi yang akan memungkinkan pengguna untuk berkomunikasi dengan WhatsApp melalui chatbot yang cerdas dan efisien. Proyek ini akan memanfaatkan berbagai teknologi termasuk API dan Micro Frontends untuk mencapai tujuan ini.
 
-Chatbot Cerdas: Chatbot yang dikembangkan akan mampu memahami pesan dari pengguna, menjawab pertanyaan, memberikan informasi, dan menjalankan tindakan yang diminta oleh pengguna. Ini akan memungkinkan pengguna untuk melakukan berbagai tugas melalui WhatsApp, seperti memesan produk, mendapatkan informasi, atau berinteraksi dengan layanan perusahaan.
+# Chatbot Cerdas:
+Chatbot yang dikembangkan akan mampu memahami pesan dari pengguna, menjawab pertanyaan, memberikan informasi, dan menjalankan tindakan yang diminta oleh pengguna. Ini akan memungkinkan pengguna untuk melakukan berbagai tugas melalui WhatsApp, seperti memesan produk, mendapatkan informasi, atau berinteraksi dengan layanan perusahaan.
 
 Penggunaan API: Proyek ini akan mengintegrasikan WhatsApp dengan berbagai API yang diperlukan. Misalnya, untuk mengirim pesan, membaca pesan masuk, mengelola kontak, dan melakukan tindakan lainnya melalui WhatsApp. Penggunaan API akan memungkinkan chatbot untuk berkomunikasi dengan WhatsApp secara otomatis dan efisien.
 
