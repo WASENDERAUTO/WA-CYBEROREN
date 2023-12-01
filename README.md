@@ -26,10 +26,13 @@ Proyek ini akan mengintegrasikan WhatsApp dengan berbagai API yang diperlukan. M
 # Micro Frontends:
 Untuk memastikan skalabilitas dan fleksibilitas, proyek ini akan menggunakan konsep Micro Frontends. Ini berarti antarmuka pengguna akan terdiri dari beberapa komponen independen yang dapat dikembangkan, dikelola, dan diubah dengan mudah. Hal ini akan memungkinkan pengembang untuk fokus pada pengembangan fitur tertentu tanpa mempengaruhi keseluruhan sistem.
 
-Pengalaman Pengguna yang Lebih Baik: Tujuan utama proyek ini adalah memberikan pengalaman pengguna yang lebih baik ketika berinteraksi dengan WhatsApp. Chatbot yang cerdas dan kemampuan integrasi dengan API akan mempercepat respon dan memberikan akses ke berbagai informasi dan layanan dengan mudah.
+Pengalaman Pengguna yang Lebih Baik:
+Tujuan utama proyek ini adalah memberikan pengalaman pengguna yang lebih baik ketika berinteraksi dengan WhatsApp. Chatbot yang cerdas dan kemampuan integrasi dengan API akan mempercepat respon dan memberikan akses ke berbagai informasi dan layanan dengan mudah.
 
-Skalabilitas dan Fleksibilitas: Dengan menggunakan Micro Frontends, sistem akan lebih mudah diperluas dan disesuaikan dengan kebutuhan masa depan. Ini akan memungkinkan penambahan fitur baru, integrasi dengan layanan pihak ketiga, dan peningkatan kinerja dengan lebih mudah.
+Skalabilitas dan Fleksibilitas:
+Dengan menggunakan Micro Frontends, sistem akan lebih mudah diperluas dan disesuaikan dengan kebutuhan masa depan. Ini akan memungkinkan penambahan fitur baru, integrasi dengan layanan pihak ketiga, dan peningkatan kinerja dengan lebih mudah.
 
-Keamanan dan Privasi: Keamanan dan privasi pengguna akan menjadi prioritas utama dalam pengembangan proyek ini. Data pengguna harus dijaga dengan baik, dan interaksi dengan WhatsApp harus mematuhi aturan dan kebijakan yang berlaku.
+Keamanan dan Privasi:
+Keamanan dan privasi pengguna akan menjadi prioritas utama dalam pengembangan proyek ini. Data pengguna harus dijaga dengan baik, dan interaksi dengan WhatsApp harus mematuhi aturan dan kebijakan yang berlaku.
 
 Proyek Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Frontends adalah upaya untuk meningkatkan cara pengguna berkomunikasi dengan WhatsApp dan memaksimalkan potensi chatbot untuk berbagai keperluan. Dengan integrasi yang kuat, kecerdasan buatan, dan fokus pada pengalaman pengguna, proyek ini diharapkan dapat memberikan solusi yang inovatif dan efektif dalam berinteraksi dengan platform pesan populer seperti WhatsApp.
