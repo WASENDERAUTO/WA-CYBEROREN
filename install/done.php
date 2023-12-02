@@ -40,7 +40,7 @@ $base .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAM
 
                 <form class="login100-form validate-form">
                     <span class="login100-form-title">
-                        Successfully Setup WA-CYBEROREN
+                        Successfully Setup WALazy
                     </span>
 
                     <span class="login100-form-title" style="font-size: 14px;">
