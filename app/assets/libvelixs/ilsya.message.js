@@ -17,10 +17,10 @@ $("select[name='message_type']").on('change', function () {
     let html = '<div class="row">';
     switch (value) {
         case "text":
-            html += '<div class="col-12"><div class="mb-3"><label class="form-label">Message</label><textarea name="message" rows="6" class="form-control" required></textarea></div></div>';
+            html += '<div class="col-12"><div class="mb-3"><label class="form-label">Message</label><textarea name="message" rows="6" class="form-control" placeholder="Example : Hai Everyone" required></textarea></div></div>';
             break;
         case "media":
-            html += '<div class="col-12 col-xl-6 col-lg-6"><div class="mb-3"><label class="form-label">Media</label><div class="input-group"><input type="text" class="form-control" name="media" required><button class="btn btn-primary waves-effect filemanagerilsya" type="button">Upload</button></div></div></div>';
+            html += '<div class="col-12 col-xl-6 col-lg-6"><div class="mb-3"><label class="form-label">Media</label><div class="input-group"><input type="text" class="form-control" name="media" placeholder="Example : Hai Everyone" required><button class="btn btn-primary waves-effect filemanagerilsya" type="button">Upload</button></div></div></div>';
             html += '<div class="col-12 col-xl-6 col-lg-6"><div class="mb-3"><label class="form-label">Media Mime</label><select name="media_type" required class="form-select"><option value="">-- Select One --</option><option value="image">Image</option><option value="video">Video</option><option value="audio">Audio</option><option value="file">File</option></select></div></div>';
             html += '<div class="col-12"><div class="mb-3"><label class="form-label">Message</label><textarea name="message" rows="6" class="form-control"></textarea></div></div>';
             break;
@@ -32,7 +32,7 @@ $("select[name='message_type']").on('change', function () {
             break;
         case "list":
             html += '<div class="col-12"><div class="mb-3"><label class="form-label">Title</label><input name="title" class="form-control" autocomplete="off"></div></div>';
-            html += '<div class="col-12"><div class="mb-3"><label class="form-label">Message</label><textarea name="message" rows="6" class="form-control" required></textarea></div></div>';
+            html += '<div class="col-12"><div class="mb-3"><label class="form-label">Message</label><textarea name="message" placeholder="Example : Hai Everyone" rows="6" class="form-control" required></textarea></div></div>';
             html += '<div class="col-12"><div class="mb-3"><label class="form-label">Footer</label><input name="footer" class="form-control" required autocomplete="off"></div></div>';
             html += '<div class="col-12"><div class="mb-3"><label class="form-label">Button Text</label><input name="button_text" class="form-control" required placeholder="Click Here" autocomplete="off"></div></div>';
             tbody = '<tr><td><select name="type[]" class="form-select" required=""><option value="option">Option</option><option value="section">Section</option></select></td><td><input type="text" name="btn_display[]" class="form-control" placeholder="Ex: Menu Click Me" required=""></td><td data-input-btn-id><input type="text" name="btn_id[]" placeholder="Ex: !menu" class="form-control" required=""></td><td><button class="btn btn-label-danger is-delete" type="button"><i class="ti ti-trash-x"></i></button></td></tr>';
