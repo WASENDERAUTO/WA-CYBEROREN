@@ -190,7 +190,7 @@
 
 @push('js')
     <script src="{!! asset('assets/libvelixs/ilsya.files.js') !!}"></script>
-    <script src="{!! asset('assets/libvelixs/ilsya.message.js?v=12') !!}"></script>
+    <script src="{!! asset('assets/libvelixs/ilsya.message.js?v=121322') !!}"></script>
     <script>
         var ilsya = new velixs()
         var files = new FileManager({

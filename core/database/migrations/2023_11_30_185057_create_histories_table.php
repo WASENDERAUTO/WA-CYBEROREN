@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bulks', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+        Schema::create('histories', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->uuid('session_id');
-            $table->bigInteger('campaign_id');
-            $table->string('receiver_name')->nullable();
             $table->string('receiver');
             $table->string('message_type');
             $table->longText('message');
-            $table->enum('status', ['sent', 'invalid', 'failed', 'pending'])->default('pending');
+            $table->enum('from',['api', 'single', 'responder'])->default('api');
+            $table->enum('status', ['sent', 'invalid', 'failed'])->default('failed');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bulks');
+        Schema::dropIfExists('histories');
     }
 };

@@ -1,1 +1,362 @@
-function _0x194e(_0x4ba131,_0x4c3ee7){const _0x42fdcc=_0x42fd();return _0x194e=function(_0x194e6a,_0xce8c21){_0x194e6a=_0x194e6a-0x108;let _0x3e802d=_0x42fdcc[_0x194e6a];return _0x3e802d;},_0x194e(_0x4ba131,_0x4c3ee7);}const _0x4f1e6a=_0x194e;function _0x42fd(){const _0x5edbbc=['CONNECTED','child','@hapi/boom','27wEZOgT','creds.update','getSession','[SESSION]\x20WAITING\x20FOR\x20THE\x20SCAN\x20QR\x20(\x20','442077eISjAB','[SESSION]\x20AUTO\x20START\x20:\x20','timedOut','[SESSION]\x20NEW\x20CONNECTED.','length','54892210qWEnco','DEVICE\x20NOT\x20FOUND.','[SESSION]\x20DISCONNECTED,\x20RECONNECTING\x20:\x20','env','/sessions','updateStatus','mkdirSync','[SESSION]\x20RESTART\x20REQUIRED,\x20RESTARTING\x20:\x20','connection.update','3.0','creds','sessionPath','[DEVICE]\x20DEVICE\x20NOT\x20FOUND,\x20PLEASE\x20REFRESH\x20PAGE.','pino','20494ZmGOLQ','[SESSION]\x20CONNECTION\x20TIMED\x20OUT,\x20RECONNECTING...','name','../app/database/sessions.db.js','./../app/lib/Event.js','createSession','notify','/store_walix.json','Connection\x20Lost,\x20Reconnecting...','ENOENT','split','messages.upsert','error','[SESSION]\x20LOGGED\x20OUT,\x20PLEASE\x20RESTART\x20SESSION!','session_name','[SESSION]\x20LOGGED\x20OUT,\x20PLEASE\x20REGENERATE\x20QR\x20CODE\x20:\x20','rmSync','TIME_OUT_QR','[SESSION]\x20CONNECTION\x20REPLACED,\x20PLEASE\x20CLOSE\x20CURRENT\x20SESSION\x20FIRST.','[SESSION]\x20CONNECTION\x20REPLACED,\x20ANOTHER\x20NEW\x20SESSION\x20OPENED,\x20PLEASE\x20CLOSE\x20CURRENT\x20SESSION\x20FIRST\x20:\x20','[SESSION]\x20AUTO\x20START\x20ERROR\x20:\x20','logger','Safari','QR\x20Code\x20Expired','existsSync','5435UPXmDC','420903YyWOtC','Restart\x20Required,\x20Restarting...','emit','WALazy','findAll','info','endsession','9bERIbg','socket','[SESSION]\x20CONNECTION\x20LOST,\x20RECONNECTING...','silent','deleteSession','generateQr','connectionClosed','../app/lib/myf.velixs.js','loggedOut','delete','Disconnected,\x20Unknown\x20Reason.','[SESSION]\x20WAITING\x20FOR\x20THE\x20SCAN\x20QR\x20:\x20','\x20OF\x20','[SESSION]\x20CONNECTION\x20TIMED\x20OUT,\x20RECONNECTING\x20:\x20','wa.connection','\x20).','removeAllListeners','forEach','@whiskeysockets/baileys','/../storage','toDataURL','Logged\x20Out,\x20Please\x20Regenerate\x20QR\x20Code.','output','[SESSION]\x20SESSION\x20END,\x20PLEASE\x20REGENERATE\x20QR\x20CODE.','storagePath','3764KKrQwP','findSessionId','debug','mainHandler','code','get','[SESSION]\x20DISCONNECTED,\x20UNKNOWN\x20REASON.','sessionconnected','bind','[SESSION]\x20SESSION\x20END\x20:\x20','Connection\x20TimedOut,\x20Reconnecting...','badSession','[SESSION]\x20BAD\x20SESSION\x20FILE,\x20PLEASE\x20REGENERATE\x20QR\x20CODE.','time_out_qr','servervelixs','chats','15406400lyxcbG','open','end','statusCode','10986132SNvkeC','type','[SESSION]\x20STORE\x20ERROR\x20:\x20','exports','reconnect','[SESSION]\x20SESSION\x20DELETED\x20:\x20','qr200','readFromFile','close','authState','platform','[SESSION]\x20RESTART\x20REQUIRED,\x20RESTARTING...','[SESSION]\x20CONNECTION\x20LOST,\x20RECONNECTING\x20:\x20'];_0x42fd=function(){return _0x5edbbc;};return _0x42fd();}(function(_0x26278b,_0x3af1a1){const _0x20ef43=_0x194e,_0x3258e5=_0x26278b();while(!![]){try{const _0x3cc2a2=parseInt(_0x20ef43(0x144))/0x1+-parseInt(_0x20ef43(0x157))/0x2*(parseInt(_0x20ef43(0x140))/0x3)+-parseInt(_0x20ef43(0x11c))/0x4*(parseInt(_0x20ef43(0x170))/0x5)+-parseInt(_0x20ef43(0x130))/0x6+-parseInt(_0x20ef43(0x171))/0x7+-parseInt(_0x20ef43(0x12c))/0x8+-parseInt(_0x20ef43(0x178))/0x9*(-parseInt(_0x20ef43(0x149))/0xa);if(_0x3cc2a2===_0x3af1a1)break;else _0x3258e5['push'](_0x3258e5['shift']());}catch(_0x4b4995){_0x3258e5['push'](_0x3258e5['shift']());}}}(_0x42fd,0xf3f59));const {default:WASocket,makeInMemoryStore,DisconnectReason,useMultiFileAuthState,fetchLatestWaWebVersion}=require(_0x4f1e6a(0x115)),{logger}=require(_0x4f1e6a(0x10a)),pino=require(_0x4f1e6a(0x156)),qrcode=require('qrcode'),fs=require('fs'),SessionsDatabase=require(_0x4f1e6a(0x15a)),{Boom}=require(_0x4f1e6a(0x13f)),Message=require('./Client/MessageHandler.js'),Bulk=require('./Client/Bulk.js'),eventEmitter=require(_0x4f1e6a(0x15b));let sessionMap=new Map();class SessionConnection extends SessionsDatabase{constructor(_0x5c47fe){const _0x48b996=_0x4f1e6a;super(),this[_0x48b996(0x179)]=_0x5c47fe,this[_0x48b996(0x11b)]=__dirname+_0x48b996(0x116),this[_0x48b996(0x154)]=this[_0x48b996(0x11b)]+_0x48b996(0x14d),this['time_out_qr']=0x0;}async[_0x4f1e6a(0x142)](_0x16ccd6){const _0x2e1e6d=_0x4f1e6a;return sessionMap['get'](_0x16ccd6)?sessionMap[_0x2e1e6d(0x121)](_0x16ccd6):null;}async['deleteSession'](_0x2f7940){const _0x55dc79=_0x4f1e6a;try{sessionMap[_0x55dc79(0x10c)](_0x2f7940);if(fs[_0x55dc79(0x16f)](this[_0x55dc79(0x154)]+'/'+_0x2f7940))fs[_0x55dc79(0x167)](this['sessionPath']+'/'+_0x2f7940,{'force':!![],'recursive':!![]});logger(_0x55dc79(0x176),_0x55dc79(0x135)+(_0x2f7940+'\x20'));}catch(_0x585ebf){logger(_0x55dc79(0x163),'[SESSION]\x20SESSION\x20DELETED\x20ERROR\x20:\x20'+(_0x2f7940+'\x20'));}}async[_0x4f1e6a(0x108)](_0xd6238a,_0x3f1427){const _0x5cc30a=_0x4f1e6a;let _0x187b9f=await qrcode[_0x5cc30a(0x117)](_0xd6238a,{'scale':0x8});setTimeout(()=>{const _0x1638ff=_0x5cc30a;this['socket'][_0x1638ff(0x173)](_0x1638ff(0x12a),{'status':!![],'code_message':_0x1638ff(0x136),'session_id':_0x3f1427,'qr':_0x187b9f});},0x7d0),this[_0x5cc30a(0x129)]++,logger('info',_0x5cc30a(0x10e)+(_0x3f1427+'\x20')+('('+this['time_out_qr']+')')),this[_0x5cc30a(0x179)][_0x5cc30a(0x173)](_0x5cc30a(0x16c),{'session_id':_0x3f1427,'type':_0x5cc30a(0x176),'message':_0x5cc30a(0x143)+this[_0x5cc30a(0x129)]+_0x5cc30a(0x10f)+process[_0x5cc30a(0x14c)][_0x5cc30a(0x168)]+_0x5cc30a(0x112)});}async['autoStart'](){const _0x3816f9=_0x4f1e6a;let _0x506f77=await this['table'][_0x3816f9(0x175)]({'where':{'status':_0x3816f9(0x13d)}});_0x506f77[_0x3816f9(0x148)]>0x0&&_0x506f77[_0x3816f9(0x114)](async _0x4c55c0=>{const _0x1316ff=_0x3816f9;fs[_0x1316ff(0x16f)](this['sessionPath']+'/'+_0x4c55c0['id'])?(logger('info',_0x1316ff(0x145)+(_0x4c55c0[_0x1316ff(0x165)]+'\x20')),await this[_0x1316ff(0x15c)](_0x4c55c0['id'])):(logger(_0x1316ff(0x176),_0x1316ff(0x16b)+(_0x4c55c0['session_name']+'\x20')),await this[_0x1316ff(0x14e)](_0x4c55c0['id']));});}async[_0x4f1e6a(0x15c)](_0x363b4b){const _0x47815b=_0x4f1e6a;var _0x57e0b4=0x0;const _0x28ee75=this['sessionPath']+'/'+_0x363b4b,_0x52a86e=this[_0x47815b(0x154)]+'/'+_0x363b4b+_0x47815b(0x15e);if(!fs[_0x47815b(0x16f)](_0x28ee75))fs[_0x47815b(0x14f)](_0x28ee75,{'recursive':!![]});let {state:_0x2715fb,saveCreds:_0x364b14}=await useMultiFileAuthState(_0x28ee75);const {version:_0x319650,isLatest:_0x871e26}=await fetchLatestWaWebVersion(),_0x101fbf=makeInMemoryStore({'logger':pino()[_0x47815b(0x13e)]({'level':_0x47815b(0x17b),'stream':'store'})}),_0x4db134=WASocket({'printQRInTerminal':![],'auth':_0x2715fb,'logger':pino({'level':'silent'}),'browser':[_0x47815b(0x174),_0x47815b(0x16d),_0x47815b(0x152)],'version':_0x319650});try{_0x101fbf[_0x47815b(0x137)](_0x52a86e);let _0x4afc55=setInterval(()=>{const _0x3f89b6=_0x47815b;try{_0x101fbf['writeToFile'](_0x52a86e);}catch(_0x59c150){_0x59c150[_0x3f89b6(0x120)]===_0x3f89b6(0x160)&&clearInterval(_0x4afc55);}},0x2710);_0x101fbf[_0x47815b(0x124)](_0x4db134['ev']),_0x4db134[_0x47815b(0x12b)]=_0x101fbf['chats'];}catch(_0x55941b){logger(_0x47815b(0x163),_0x47815b(0x132)+(_0x363b4b+'\x20'));}sessionMap['set'](_0x363b4b,{..._0x4db134,'isStop':![]}),_0x4db134['ev']['on'](_0x47815b(0x141),_0x364b14),_0x4db134['ev']['on']('connection.update',async _0x1fd995=>{const _0x7367f4=_0x47815b;if(_0x1fd995['isNewLogin'])try{if(await this[_0x7367f4(0x11d)](_0x363b4b))await this['updateStatus'](_0x363b4b,'CONNECTED',_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)]['me']['id'][_0x7367f4(0x161)](':')[0x0]);else return this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':'error','message':_0x7367f4(0x155)}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'status':!![],'code_message':'device404','session_id':_0x363b4b,'message':_0x7367f4(0x14a)}),_0x4db134['ev'][_0x7367f4(0x113)]('connection.update'),_0x4db134[_0x7367f4(0x12e)](),this[_0x7367f4(0x17c)](_0x363b4b);return this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':'[SESSION]\x20NEW\x20CONNECTED.'}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'status':!![],'code_message':_0x7367f4(0x123),'session_id':_0x363b4b,'session':{'name':_0x4db134['authState'][_0x7367f4(0x153)]['me'][_0x7367f4(0x159)],'number':_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)]['me']['id'][_0x7367f4(0x161)](':')[0x0],'platform':_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)][_0x7367f4(0x13a)],'log':''}}),eventEmitter[_0x7367f4(0x173)]('wa.connection',{'session_id':_0x363b4b,'status':'open'});}catch(_0x230742){}else{if(_0x1fd995['qr'])try{if(this['time_out_qr']>=process[_0x7367f4(0x14c)][_0x7367f4(0x168)]){_0x4db134['ev']['removeAllListeners'](_0x7367f4(0x151)),this[_0x7367f4(0x17c)](_0x363b4b),logger(_0x7367f4(0x11e),_0x7367f4(0x125)+(''+_0x363b4b)),this['socket'][_0x7367f4(0x173)]('logger',{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':_0x7367f4(0x11a)}),this['socket'][_0x7367f4(0x173)](_0x7367f4(0x12a),{'status':!![],'code_message':'regenerateqr','session_id':_0x363b4b,'message':_0x7367f4(0x16e)});return;}this[_0x7367f4(0x108)](_0x1fd995['qr'],_0x363b4b);}catch(_0x5464eb){}}try{const {lastDisconnect:_0x4e9ef9,connection:_0x37ea2d}=_0x1fd995;if(_0x37ea2d===_0x7367f4(0x138)){this[_0x7367f4(0x14e)](_0x363b4b),eventEmitter[_0x7367f4(0x173)](_0x7367f4(0x111),{'session_id':_0x363b4b,'status':_0x7367f4(0x138)});const _0x3a4205=new Boom(_0x4e9ef9?.['error'])?.[_0x7367f4(0x119)][_0x7367f4(0x12f)];if(_0x3a4205===DisconnectReason[_0x7367f4(0x127)])return this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':'endsession','session_id':_0x363b4b,'message':'Bad\x20Session\x20File.'}),this[_0x7367f4(0x179)]['emit'](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x163),'message':_0x7367f4(0x128)}),logger(_0x7367f4(0x163),'[SESSION]\x20BAD\x20SESSION\x20FILE\x20:\x20'+(''+_0x363b4b),!![]),_0x4db134['ev'][_0x7367f4(0x113)]('connection.update'),_0x4db134[_0x7367f4(0x12e)](),this['deleteSession'](_0x363b4b);else{if(_0x3a4205===DisconnectReason[_0x7367f4(0x109)])logger(_0x7367f4(0x11e),'[SESSION]\x20CONNECTION\x20CLOSED,\x20RECONNECTING\x20:\x20'+(''+_0x363b4b),!![]),this['socket'][_0x7367f4(0x173)]('servervelixs',{'code_message':_0x7367f4(0x134),'session_id':_0x363b4b,'message':'Connection\x20Closed,\x20Reconnecting...'}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':'[SESSION]\x20CONNECTION\x20CLOSED,\x20RECONNECTING...'}),_0x4db134['ev'][_0x7367f4(0x113)](_0x7367f4(0x151)),_0x4db134[_0x7367f4(0x12e)](),this[_0x7367f4(0x15c)](_0x363b4b);else{if(_0x3a4205===DisconnectReason['connectionLost'])logger(_0x7367f4(0x11e),_0x7367f4(0x13c)+(''+_0x363b4b),!![]),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':'reconnect','session_id':_0x363b4b,'message':_0x7367f4(0x15f)}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':_0x7367f4(0x17a)}),_0x4db134['ev'][_0x7367f4(0x113)](_0x7367f4(0x151)),_0x4db134[_0x7367f4(0x12e)](),this['createSession'](_0x363b4b);else{if(_0x3a4205===DisconnectReason['connectionReplaced'])return logger(_0x7367f4(0x11e),_0x7367f4(0x16a)+(''+_0x363b4b),!![]),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':'endsession','session_id':_0x363b4b,'message':'Connection\x20Replaced,\x20Another\x20New\x20Session\x20Opened.'}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':_0x7367f4(0x169)}),_0x4db134['ev']['removeAllListeners'](_0x7367f4(0x151)),_0x4db134['end'](),this['deleteSession'](_0x363b4b);else{if(_0x3a4205===DisconnectReason[_0x7367f4(0x10b)])logger('debug',_0x7367f4(0x166)+(''+_0x363b4b),!![]),this['socket'][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':_0x7367f4(0x177),'session_id':_0x363b4b,'message':_0x7367f4(0x118)}),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':'debug','message':_0x7367f4(0x164)}),_0x4db134['ev']['removeAllListeners'](_0x7367f4(0x151)),_0x4db134[_0x7367f4(0x12e)](),this[_0x7367f4(0x17c)](_0x363b4b,![]);else{if(_0x3a4205===DisconnectReason['restartRequired'])logger(_0x7367f4(0x11e),_0x7367f4(0x150)+(''+_0x363b4b),!![]),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':_0x7367f4(0x134),'session_id':_0x363b4b,'message':_0x7367f4(0x172)}),this[_0x7367f4(0x179)]['emit'](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':_0x7367f4(0x13b)}),_0x4db134['ev']['removeAllListeners']('connection.update'),_0x4db134['end'](),this[_0x7367f4(0x15c)](_0x363b4b);else{if(_0x3a4205===DisconnectReason[_0x7367f4(0x146)])logger(_0x7367f4(0x11e),_0x7367f4(0x110)+(''+_0x363b4b),!![]),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':_0x7367f4(0x134),'session_id':_0x363b4b,'message':_0x7367f4(0x126)}),this[_0x7367f4(0x179)][_0x7367f4(0x173)]('logger',{'session_id':_0x363b4b,'type':_0x7367f4(0x11e),'message':_0x7367f4(0x158)}),_0x4db134['ev'][_0x7367f4(0x113)](_0x7367f4(0x151)),_0x4db134[_0x7367f4(0x12e)](),this[_0x7367f4(0x15c)](_0x363b4b);else{logger(_0x7367f4(0x11e),_0x7367f4(0x14b)+(''+_0x363b4b),!![]),this[_0x7367f4(0x179)][_0x7367f4(0x173)](_0x7367f4(0x12a),{'code_message':_0x7367f4(0x177),'session_id':_0x363b4b,'message':_0x7367f4(0x10d)}),this[_0x7367f4(0x179)]['emit'](_0x7367f4(0x16c),{'session_id':_0x363b4b,'type':'debug','message':_0x7367f4(0x122)}),_0x4db134['ev'][_0x7367f4(0x113)](_0x7367f4(0x151)),_0x4db134[_0x7367f4(0x12e)]();if(_0x57e0b4>=0xa)_0x57e0b4=0x0,this[_0x7367f4(0x17c)](_0x363b4b,![]);else return _0x57e0b4++,this[_0x7367f4(0x15c)](_0x363b4b);}}}}}}}}else _0x37ea2d==_0x7367f4(0x12d)&&(await this[_0x7367f4(0x14e)](_0x363b4b,'CONNECTED',_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)]['me']['id']['split'](':')[0x0]),logger(_0x7367f4(0x11e),'[SESSION]\x20CONNECTED\x20:\x20'+(''+_0x363b4b)),this[_0x7367f4(0x179)][_0x7367f4(0x173)]('logger',{'session_id':_0x363b4b,'type':'debug','message':_0x7367f4(0x147)}),this[_0x7367f4(0x179)]['emit']('servervelixs',{'status':!![],'code_message':_0x7367f4(0x123),'session_id':_0x363b4b,'session':{'name':_0x4db134[_0x7367f4(0x139)]['creds']['me'][_0x7367f4(0x159)],'number':_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)]['me']['id'][_0x7367f4(0x161)](':')[0x0],'platform':_0x4db134[_0x7367f4(0x139)][_0x7367f4(0x153)][_0x7367f4(0x13a)],'log':''}}),eventEmitter[_0x7367f4(0x173)](_0x7367f4(0x111),{'session_id':_0x363b4b,'status':_0x7367f4(0x12d)}));}catch(_0x9cdd77){console['log'](_0x9cdd77);}}),_0x4db134['ev']['on'](_0x47815b(0x162),async _0x2f171d=>{const _0x46d33e=_0x47815b;if(_0x2f171d[_0x46d33e(0x131)]!==_0x46d33e(0x15d))return;const _0x13e067=new Message(_0x4db134,_0x2f171d['messages'][0x0],_0x363b4b);_0x13e067[_0x46d33e(0x11f)]();}),new Bulk(_0x4db134,_0x363b4b)[_0x47815b(0x11f)]();}}module[_0x4f1e6a(0x133)]=SessionConnection;
+const {
+    default: WASocket,
+    makeInMemoryStore,
+    DisconnectReason,
+    useMultiFileAuthState,
+    fetchLatestWaWebVersion,
+} = require("@whiskeysockets/baileys");
+const { logger } = require("../app/lib/myf.velixs.js");
+const pino = require("pino");
+const qrcode = require("qrcode");
+const fs = require("fs");
+const SessionsDatabase = require("../app/database/sessions.db.js");
+const { Boom } = require("@hapi/boom");
+const Message = require("./Client/MessageHandler.js");
+const Bulk = require("./Client/Bulk.js");
+const eventEmitter = require("./../app/lib/Event.js");
+let sessionMap = new Map();
+
+class SessionConnection extends SessionsDatabase {
+
+    constructor(socket) {
+        super();
+        this.socket = socket;
+        this.storagePath = __dirname + "/../storage";
+        this.sessionPath = this.storagePath + "/sessions";
+        this.time_out_qr = 0;
+    }
+
+    async getSession(session) {
+        return sessionMap.get(session) ? sessionMap.get(session) : null
+    }
+
+    async deleteSession(session) {
+        try {
+            sessionMap.delete(session);
+            if (fs.existsSync(`${this.sessionPath}/${session}`)) fs.rmSync(`${this.sessionPath}/${session}`, { force: true, recursive: true });
+            logger("info", "[SESSION] SESSION DELETED : " + `${session} `);
+        } catch (e) {
+            logger("error", "[SESSION] SESSION DELETED ERROR : " + `${session} `);
+        }
+    }
+
+    async generateQr(input, session) {
+        let rawData = await qrcode.toDataURL(input, { scale: 8 });
+        // wait 3 seconds
+        setTimeout(() => {
+            this.socket.emit(`servervelixs`, {
+                status: true,
+                code_message: "qr200",
+                session_id: session,
+                qr: rawData,
+            });
+        }, 2000);
+        this.time_out_qr++;
+        logger("info", "[SESSION] WAITING FOR THE SCAN QR : " + `${session} ` + `(${this.time_out_qr})`);
+        this.socket.emit('logger', {
+            session_id: session,
+            type: 'info',
+            message: `[SESSION] WAITING FOR THE SCAN QR ( ${this.time_out_qr} OF ${process.env.TIME_OUT_QR} ).`
+        })
+    }
+
+    async autoStart() {
+        let session = await this.table.findAll({ where: { status: 'CONNECTED' } });
+        if (session.length > 0) {
+            session.forEach(async (session) => {
+                if (fs.existsSync(`${this.sessionPath}/${session.id}`)) {
+                    logger("info", "[SESSION] AUTO START : " + `${session.session_name} `);
+                    await this.createSession(session.id);
+                } else {
+                    logger("info", "[SESSION] AUTO START ERROR : " + `${session.session_name} `);
+                    await this.updateStatus(session.id);
+                }
+            });
+        }
+    }
+
+    async createSession(session) {
+        var unknown_attempt = 0;
+        const sessionDir = `${this.sessionPath}/${session}`;
+        const storePath = `${this.sessionPath}/${session}/store_walix.json`;
+        if (!fs.existsSync(sessionDir)) fs.mkdirSync(sessionDir, { recursive: true });
+        let { state, saveCreds } = await useMultiFileAuthState(sessionDir);
+        const { version, isLatest } = await fetchLatestWaWebVersion();
+        const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
+
+        const velixs = WASocket({
+            printQRInTerminal: false,
+            auth: state,
+            logger: pino({ level: "silent" }),
+            browser: ["WALazy", "Safari", "3.0"],
+            version
+        });
+
+        try {
+            store.readFromFile(storePath);
+            let store_interval = setInterval(() => {
+                try {
+                    store.writeToFile(storePath);
+                } catch (e) {
+                    if (e.code === "ENOENT") {
+                        clearInterval(store_interval)
+                    }
+                }
+            }, 10000);
+
+            store.bind(velixs.ev);
+            velixs.chats = store.chats;
+        } catch (e) {
+            logger("error", "[SESSION] STORE ERROR : " + `${session} `);
+        }
+
+        sessionMap.set(session, { ...velixs, isStop: false }); // add session to map
+
+        // event
+        velixs.ev.on("creds.update", saveCreds);
+
+        velixs.ev.on("connection.update", async (update) => {
+            if (update.isNewLogin) {
+                try {
+                    if (await this.findSessionId(session)) {
+                        await this.updateStatus(session, 'CONNECTED', velixs.authState.creds.me.id.split(":")[0]);
+                    } else {
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'error',
+                            message: `[DEVICE] DEVICE NOT FOUND, PLEASE REFRESH PAGE.`
+                        })
+                        this.socket.emit(`servervelixs`, {
+                            status: true,
+                            code_message: "device404",
+                            session_id: session,
+                            message: "DEVICE NOT FOUND.",
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        return this.deleteSession(session);
+                    }
+                    this.socket.emit(`logger`, {
+                        session_id: session,
+                        type: 'debug',
+                        message: `[SESSION] NEW CONNECTED.`
+                    })
+                    this.socket.emit(`servervelixs`, {
+                        status: true,
+                        code_message: "sessionconnected",
+                        session_id: session,
+                        session: {
+                            name: velixs.authState.creds.me.name,
+                            number: velixs.authState.creds.me.id.split(":")[0],
+                            platform: velixs.authState.creds.platform,
+                            log: '',
+                        }
+                    });
+                    return eventEmitter.emit('wa.connection', {
+                        session_id: session,
+                        status: 'open',
+                    });
+                } catch (e) { }
+            } else {
+                if (update.qr) {
+                    try {
+                        if (this.time_out_qr >= process.env.TIME_OUT_QR) {
+                            velixs.ev.removeAllListeners("connection.update");
+                            this.deleteSession(session);
+                            logger("debug", "[SESSION] SESSION END : " + `${session}`);
+                            this.socket.emit('logger', {
+                                session_id: session,
+                                type: 'debug',
+                                message: `[SESSION] SESSION END, PLEASE REGENERATE QR CODE.`
+                            })
+                            this.socket.emit(`servervelixs`, {
+                                status: true,
+                                code_message: "regenerateqr",
+                                session_id: session,
+                                message: "QR Code Expired",
+                            });
+                            return;
+                        }
+                        this.generateQr(update.qr, session);
+                    } catch (e) { }
+                }
+            }
+
+            try {
+                const { lastDisconnect, connection } = update;
+                if (connection === "close") {
+                    this.updateStatus(session);
+                    eventEmitter.emit('wa.connection', {
+                        session_id: session,
+                        status: 'close',
+                    });
+                    const reason = new Boom(lastDisconnect?.error)?.output.statusCode
+                    if (reason === DisconnectReason.badSession) {
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "endsession",
+                            session_id: session,
+                            message: "Bad Session File.",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'error',
+                            message: `[SESSION] BAD SESSION FILE, PLEASE REGENERATE QR CODE.`
+                        });
+                        logger("error", "[SESSION] BAD SESSION FILE : " + `${session}`, true);
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        return this.deleteSession(session);
+                    } else if (reason === DisconnectReason.connectionClosed) {
+                        logger("debug", "[SESSION] CONNECTION CLOSED, RECONNECTING : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "reconnect",
+                            session_id: session,
+                            message: "Connection Closed, Reconnecting...",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] CONNECTION CLOSED, RECONNECTING...`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        this.createSession(session);
+                    } else if (reason === DisconnectReason.connectionLost) {
+                        logger("debug", "[SESSION] CONNECTION LOST, RECONNECTING : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "reconnect",
+                            session_id: session,
+                            message: "Connection Lost, Reconnecting...",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] CONNECTION LOST, RECONNECTING...`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        this.createSession(session);
+                    } else if (reason === DisconnectReason.connectionReplaced) {
+                        logger("debug", "[SESSION] CONNECTION REPLACED, ANOTHER NEW SESSION OPENED, PLEASE CLOSE CURRENT SESSION FIRST : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "endsession",
+                            session_id: session,
+                            message: "Connection Replaced, Another New Session Opened.",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] CONNECTION REPLACED, PLEASE CLOSE CURRENT SESSION FIRST.`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        return this.deleteSession(session);
+                    } else if (reason === DisconnectReason.loggedOut) {
+                        logger("debug", "[SESSION] LOGGED OUT, PLEASE REGENERATE QR CODE : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "endsession",
+                            session_id: session,
+                            message: "Logged Out, Please Regenerate QR Code.",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] LOGGED OUT, PLEASE RESTART SESSION!`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        this.deleteSession(session, false);
+                    } else if (reason === DisconnectReason.restartRequired) {
+                        logger("debug", "[SESSION] RESTART REQUIRED, RESTARTING : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "reconnect",
+                            session_id: session,
+                            message: "Restart Required, Restarting...",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] RESTART REQUIRED, RESTARTING...`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        this.createSession(session);
+                    } else if (reason === DisconnectReason.timedOut) {
+                        logger("debug", "[SESSION] CONNECTION TIMED OUT, RECONNECTING : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "reconnect",
+                            session_id: session,
+                            message: "Connection TimedOut, Reconnecting...",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] CONNECTION TIMED OUT, RECONNECTING...`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        this.createSession(session);
+                    } else {
+                        logger("debug", "[SESSION] DISCONNECTED, RECONNECTING : " + `${session}`, true);
+                        this.socket.emit(`servervelixs`, {
+                            code_message: "endsession",
+                            session_id: session,
+                            message: "Disconnected, Unknown Reason.",
+                        });
+                        this.socket.emit('logger', {
+                            session_id: session,
+                            type: 'debug',
+                            message: `[SESSION] DISCONNECTED, UNKNOWN REASON.`
+                        });
+                        velixs.ev.removeAllListeners("connection.update");
+                        velixs.end();
+                        if (unknown_attempt >= 10) {
+                            unknown_attempt = 0;
+                            this.deleteSession(session, false);
+                        } else {
+                            unknown_attempt++;
+                            return this.createSession(session);
+                        }
+                    }
+                } else if (connection == "open") {
+                    await this.updateStatus(session, 'CONNECTED', velixs.authState.creds.me.id.split(":")[0]);
+                    logger("debug", "[SESSION] CONNECTED : " + `${session}`);
+                    this.socket.emit(`logger`, {
+                        session_id: session,
+                        type: 'debug',
+                        message: `[SESSION] NEW CONNECTED.`
+                    })
+                    this.socket.emit(`servervelixs`, {
+                        status: true,
+                        code_message: "sessionconnected",
+                        session_id: session,
+                        session: {
+                            name: velixs.authState.creds.me.name,
+                            number: velixs.authState.creds.me.id.split(":")[0],
+                            platform: velixs.authState.creds.platform,
+                            log: '',
+                        }
+                    });
+                    eventEmitter.emit('wa.connection', {
+                        session_id: session,
+                        status: 'open',
+                    });
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        });
+
+        velixs.ev.on("messages.upsert", async (chatUpdate) => {
+            if (chatUpdate.type !== "notify") return;
+            const message = new Message(velixs, chatUpdate.messages[0], session);
+            message.mainHandler();
+        });
+
+
+        new Bulk(velixs, session).mainHandler();
+    }
+
+}
+
+module.exports = SessionConnection;

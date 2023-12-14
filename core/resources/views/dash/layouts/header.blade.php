@@ -100,7 +100,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="https://velixs.com">
+                        <a class="dropdown-item" href="https://wa.me/6281374347075">
                             <i class="ti ti-lifebuoy me-2 ti-sm"></i>
                             <span class="align-middle">Help</span>
                         </a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\Lyn;
+use App\Models\History;
 use App\Models\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -48,11 +49,23 @@ class SingleSender extends Controller
                 $response = Http::post($this->url . '/api/send-message', $pars);
                 $response = $response->json();
                 if ($response['status'] == 'success') {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'sent'
+                    ]);
                     return response()->json(['message' => 'Message sent.']);
                 } else {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'failed'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Failed to send message.')], 500);
                 }
             } catch (\Exception $e) {
+                History::record($request, [
+                    'from' => 'single',
+                    'status' => 'failed'
+                ]);
                 return response()->json(['message' => $e->getMessage()], 500);
             }
         } else if ($request->message_type == 'media') {
@@ -70,11 +83,23 @@ class SingleSender extends Controller
                 $response = Http::post($this->url . '/api/send-media', $pars);
                 $response = $response->json();
                 if ($response['status'] == 'success') {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'sent'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Media sent.')]);
                 } else {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'failed'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Failed to send message.')], 500);
                 }
             } catch (\Exception $e) {
+                History::record($request, [
+                    'from' => 'single',
+                    'status' => 'failed'
+                ]);
                 return response()->json(['message' => $e->getMessage()], 500);
             }
         } else if ($request->message_type == 'button') {
@@ -102,11 +127,23 @@ class SingleSender extends Controller
                 $response = Http::post($this->url . '/api/send-button', $pars);
                 $response = $response->json();
                 if ($response['status'] == 'success') {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'sent'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Media sent.')]);
                 } else {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'failed'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Failed to send message.')], 500);
                 }
             } catch (\Exception $e) {
+                History::record($request, [
+                    'from' => 'single',
+                    'status' => 'failed'
+                ]);
                 return response()->json(['message' => $e->getMessage()], 500);
             }
         } else if ($request->message_type == 'list') {
@@ -152,11 +189,23 @@ class SingleSender extends Controller
                 $response = Http::post($this->url . '/api/send-listmsg', $pars);
                 $response = $response->json();
                 if ($response['status'] == 'success') {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'sent'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'List Button sent.')]);
                 } else {
+                    History::record($request, [
+                        'from' => 'single',
+                        'status' => 'failed'
+                    ]);
                     return response()->json(['message' => ($response['message'] ?? 'Failed to send List Button.')], 500);
                 }
             } catch (\Exception $e) {
+                History::record($request, [
+                    'from' => 'single',
+                    'status' => 'failed'
+                ]);
                 return response()->json(['message' => $e->getMessage()], 500);
             }
         }

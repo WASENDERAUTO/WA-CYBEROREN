@@ -165,6 +165,7 @@ class CampaignsController extends Controller
                     'user_id' => auth()->user()->id,
                     'session_id' => session()->get('main_device'),
                     'campaign_id' => $campaign->id,
+                    'receiver_name' => $row->name,
                     'receiver' => $row->number,
                     'message_type' => $request->message_type,
                     'message' => $campaign->message,

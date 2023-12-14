@@ -197,6 +197,10 @@ module.exports = {
                     type: DataTypes.BIGINT,
                     allowNull: false,
                 },
+                receiver_name: {
+                    type: DataTypes.STRING,
+                    allowNull: false,
+                },
                 receiver: {
                     type: DataTypes.STRING,
                     allowNull: false,

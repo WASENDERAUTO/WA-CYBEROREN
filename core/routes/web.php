@@ -4,10 +4,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AutoresponderController;
-use App\Http\Controllers\BroadcastController;
 use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\PhonebookController;
 use App\Http\Controllers\PluginsController;
 use App\Http\Controllers\SingleSender;
@@ -102,8 +102,10 @@ Route::prefix('/')->middleware(['auth'])->group(function () {
         Route::get('/', [ApiController::class, 'index'])->name('apidocs');
     });
 
-    Route::prefix('boradcast')->group(function () {
-        Route::get('/', [BroadcastController::class, 'index'])->name('broadcast');
+    Route::prefix('history')->group(function () {
+        Route::get('/', [HistoryController::class, 'index'])->name('history');
+        Route::get('/detail/{id}', [HistoryController::class, 'detail'])->name('history.detail');
+        Route::post('/delete', [HistoryController::class, 'delete'])->name('history.delete');
     });
 
     Route::prefix('plugins')->group(function () {

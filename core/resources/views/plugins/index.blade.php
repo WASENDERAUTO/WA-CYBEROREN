@@ -51,6 +51,9 @@
             btn: [{
                 text: '<i class="ti ti-3d-cube-sphere me-sm-1" style="margin-top: -2px"></i> <span class="">More Plugins</span>',
                 className: 'is-button-add btn btn-primary me-2 ',
+                attr: {
+                    'onclick': 'window.location.href = "https://velixs.com/item/walazy-plugins"'
+                }
             }],
         })
 

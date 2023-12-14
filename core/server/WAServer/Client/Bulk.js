@@ -1,1 +1,184 @@
-const _0x2148eb=_0xd610;function _0xd610(_0x5ed7ce,_0xd63701){const _0x5b94ce=_0x5b94();return _0xd610=function(_0xd61091,_0x5d9ddc){_0xd61091=_0xd61091-0x74;let _0x30e71a=_0x5b94ce[_0xd61091];return _0x30e71a;},_0xd610(_0x5ed7ce,_0xd63701);}(function(_0x5279ec,_0x345425){const _0x5b138d=_0xd610,_0x5622ad=_0x5279ec();while(!![]){try{const _0x182dc8=parseInt(_0x5b138d(0x87))/0x1*(-parseInt(_0x5b138d(0xa7))/0x2)+-parseInt(_0x5b138d(0xb1))/0x3*(parseInt(_0x5b138d(0x89))/0x4)+parseInt(_0x5b138d(0x9e))/0x5*(-parseInt(_0x5b138d(0xa8))/0x6)+-parseInt(_0x5b138d(0xa1))/0x7+-parseInt(_0x5b138d(0x90))/0x8*(-parseInt(_0x5b138d(0x81))/0x9)+parseInt(_0x5b138d(0x97))/0xa*(parseInt(_0x5b138d(0xaf))/0xb)+parseInt(_0x5b138d(0x9f))/0xc*(parseInt(_0x5b138d(0xab))/0xd);if(_0x182dc8===_0x345425)break;else _0x5622ad['push'](_0x5622ad['shift']());}catch(_0x54ae96){_0x5622ad['push'](_0x5622ad['shift']());}}}(_0x5b94,0x56b2d));const Client=require('./Client.js'),eventEmitter=require(_0x2148eb(0xa2)),CampaignsDatabase=require(_0x2148eb(0xa4)),BulksDatabase=require(_0x2148eb(0x9d));function _0x5b94(){const _0x1be93d=['sent','completed','isWhatsapp','300856OiGmzR','failed','updateCampaign','buttons','buttonText','updateBulk','mainHandler','640630lmGHJQ','scheduled_at','list','sections','bulks','message','./../../app/database/bulks.db.js','100RCxNrw','2592780ZBDZzr','parse','2767233ceshRu','./../../app/lib/Event.js','catch','./../../app/database/campaigns.db.js','media_type','getTime','6QdKzpW','41844iqKUzM','text','status','39EumrYg','then','sendText','processing','77LzCNgb','receiver','241698xCgofX','session','caption','sendMessage','delay','sendMedia','media','button','set_cron_schedule','includes','url','exports','footer','length','bulkdb','campaigns_runing','waiting','velixs','153FTatbl','title','wacon','current_campaign','sendListButton','none','120881LyLsgW','invalid','24qDBWHA','message_type','close','campaigns'];_0x5b94=function(){return _0x1be93d;};return _0x5b94();}class Bulk extends CampaignsDatabase{constructor(_0x36c832,_0x21bb42){const _0x3d85dd=_0x2148eb;super(),this[_0x3d85dd(0x80)]=_0x36c832,this['session']=_0x21bb42,this[_0x3d85dd(0x83)]=_0x3d85dd(0x8b),this[_0x3d85dd(0x7e)]='none',this[_0x3d85dd(0x84)]=null,this[_0x3d85dd(0x7d)]=new BulksDatabase();}async[_0x2148eb(0x96)](){const _0x205f0c=_0x2148eb;eventEmitter['on']('wa.connection',async({session_id:_0x200c10,status:_0x15fc83})=>{const _0x254d6c=_0xd610;if(_0x200c10!==this['session'])return;this[_0x254d6c(0x83)]=_0x15fc83;if(_0x15fc83==='open')return this['set_cron_schedule']();else this['campaigns_runing']=_0x254d6c(0x86);}),eventEmitter['on'](_0x205f0c(0x8c),async _0x306a97=>{const _0x4a0f1c=_0x205f0c;if(_0x306a97!==this[_0x4a0f1c(0xb2)])return;return this['set_cron_schedule']();});}async[_0x2148eb(0x9b)](){const _0x5c6935=_0x2148eb;try{let _0x1a51d0=await new BulksDatabase()['getBulk'](this[_0x5c6935(0x84)]['id']);if(_0x1a51d0[_0x5c6935(0x7c)]===0x0){this[_0x5c6935(0x7e)]=_0x5c6935(0x86),await new CampaignsDatabase()[_0x5c6935(0x92)](this[_0x5c6935(0x84)]['id'],_0x5c6935(0x8e));return;}let _0x14f814=this['current_campaign'][_0x5c6935(0xb5)]*0x3e8;if(this[_0x5c6935(0x84)][_0x5c6935(0xaa)]===_0x5c6935(0x7f))await new CampaignsDatabase()[_0x5c6935(0x92)](this['current_campaign']['id'],_0x5c6935(0xae));for(let _0x938d1e=0x0;_0x938d1e<_0x1a51d0[_0x5c6935(0x7c)];_0x938d1e++){let _0x2f8f5e=_0x1a51d0[_0x938d1e];if(this[_0x5c6935(0x7e)]===_0x5c6935(0x86))break;if(this[_0x5c6935(0x83)]===_0x5c6935(0x8b)){this['campaigns_runing']=_0x5c6935(0x86);break;}if(this['campaigns_runing']!==_0x2f8f5e['campaign_id']){this[_0x5c6935(0x7e)]='none';break;}let _0x58f9e9=new Client(this[_0x5c6935(0x80)],_0x2f8f5e[_0x5c6935(0xb0)]);if(!await _0x58f9e9[_0x5c6935(0x8f)](_0x2f8f5e[_0x5c6935(0xb0)])){await this[_0x5c6935(0x7d)]['updateBulk'](_0x2f8f5e['id'],'invalid');continue;}await this[_0x5c6935(0xb4)]({'ilsya':_0x58f9e9,'row':_0x2f8f5e,'message':this[_0x5c6935(0x84)][_0x5c6935(0x9c)]}),await new Promise(_0x1c0f76=>setTimeout(_0x1c0f76,parseInt(_0x14f814)));}}catch(_0x5e7201){}}async[_0x2148eb(0xb4)]({ilsya:_0xce4902,row:_0x44e3ec,message:_0x4d38fd}){const _0x37f222=_0x2148eb;let _0x79459a=JSON[_0x37f222(0xa0)](_0x44e3ec[_0x37f222(0x9c)]);switch(_0x44e3ec[_0x37f222(0x8a)]){case _0x37f222(0xa9):_0xce4902[_0x37f222(0xad)](_0x79459a[_0x37f222(0x9c)])['then'](()=>{const _0x72b868=_0x37f222;this[_0x72b868(0x7d)]['updateBulk'](_0x44e3ec['id'],_0x72b868(0x8d));})['catch'](_0x58028c=>{const _0xfc3d6d=_0x37f222;this['bulkdb'][_0xfc3d6d(0x95)](_0x44e3ec['id'],'failed');});break;case _0x37f222(0x75):let _0x173275={'file':{'mimetype':''+_0x79459a[_0x37f222(0xa5)]}};_0xce4902[_0x37f222(0x74)](_0x79459a[_0x37f222(0x79)],_0x79459a[_0x37f222(0xb3)],_0x173275)[_0x37f222(0xac)](()=>{const _0x1b3ed2=_0x37f222;this[_0x1b3ed2(0x7d)][_0x1b3ed2(0x95)](_0x44e3ec['id'],_0x1b3ed2(0x8d));})['catch'](_0x16eff6=>{const _0x2731e6=_0x37f222;this['bulkdb'][_0x2731e6(0x95)](_0x44e3ec['id'],_0x2731e6(0x91));});break;case _0x37f222(0x76):_0xce4902['sendButton']({'text':_0x79459a[_0x37f222(0x9c)],'footer':_0x79459a[_0x37f222(0x7b)],'buttons':_0x79459a[_0x37f222(0x93)]})['then'](()=>{const _0x50b83f=_0x37f222;this[_0x50b83f(0x7d)][_0x50b83f(0x95)](_0x44e3ec['id'],'sent');})[_0x37f222(0xa3)](_0x27242a=>{const _0x470b13=_0x37f222;this[_0x470b13(0x7d)][_0x470b13(0x95)](_0x44e3ec['id'],_0x470b13(0x91));});break;case _0x37f222(0x99):if(_0x44e3ec[_0x37f222(0xb0)][_0x37f222(0x78)]('@g.us'))return this[_0x37f222(0x7d)][_0x37f222(0x95)](_0x44e3ec['id'],_0x37f222(0x88));_0xce4902[_0x37f222(0x85)]({'title':_0x79459a[_0x37f222(0x82)],'text':_0x79459a[_0x37f222(0x9c)],'footer':_0x79459a[_0x37f222(0x7b)],'button_text':_0x79459a[_0x37f222(0x94)],'sections':_0x79459a[_0x37f222(0x9a)]})[_0x37f222(0xac)](()=>{const _0x4ecbe3=_0x37f222;this[_0x4ecbe3(0x7d)][_0x4ecbe3(0x95)](_0x44e3ec['id'],_0x4ecbe3(0x8d));})[_0x37f222(0xa3)](_0xcb4cfd=>{const _0x259660=_0x37f222;this['bulkdb'][_0x259660(0x95)](_0x44e3ec['id'],_0x259660(0x91));});break;}}async[_0x2148eb(0x77)](){const _0x1c957b=_0x2148eb;this[_0x1c957b(0x84)]=await this['getCampaignsOn'](this[_0x1c957b(0xb2)]);if(this[_0x1c957b(0x84)]===null){this['campaigns_runing']=_0x1c957b(0x86);return;}if(this[_0x1c957b(0x7e)]===this[_0x1c957b(0x84)]['id'])return;this['campaigns_runing']=this[_0x1c957b(0x84)]['id'];let _0x275258=this[_0x1c957b(0x84)][_0x1c957b(0x98)];_0x275258=new Date(_0x275258)[_0x1c957b(0xa6)]();let _0x9d9550=setInterval(async()=>{const _0x3829f5=_0x1c957b;if(this[_0x3829f5(0x7e)]===_0x3829f5(0x86))return clearInterval(_0x9d9550);if(this[_0x3829f5(0x83)]===_0x3829f5(0x8b))return this[_0x3829f5(0x7e)]='none',clearInterval(_0x9d9550);if(new Date()[_0x3829f5(0xa6)]()>=_0x275258)return this[_0x3829f5(0x9b)](),clearInterval(_0x9d9550);await new Promise(_0x3cb91f=>setTimeout(_0x3cb91f,0x1388));},0x2710);}}module[_0x2148eb(0x7a)]=Bulk;
+const Client = require('./Client.js');
+const eventEmitter = require('./../../app/lib/Event.js');
+const CampaignsDatabase = require('./../../app/database/campaigns.db.js');
+const BulksDatabase = require('./../../app/database/bulks.db.js');
+
+class Bulk extends CampaignsDatabase {
+
+    constructor(velixs, session) {
+        super();
+        this.velixs = velixs;
+        this.session = session;
+        this.wacon = 'close';
+        this.campaigns_runing = 'none';
+        this.current_campaign = null;
+        this.bulkdb = new BulksDatabase();
+    }
+
+    async mainHandler() {
+        eventEmitter.on('wa.connection', async ({ session_id, status }) => {
+            if (session_id !== this.session) return;
+            this.wacon = status;
+            if (status === 'open') {
+                // console.log('triger-campaigns wa.connection open');
+                return this.set_cron_schedule();
+            } else {
+                this.campaigns_runing = 'none';
+            }
+        });
+
+        eventEmitter.on('campaigns', async (res) => {
+            if (res !== this.session) return;
+            // console.log('triger-campaigns');
+            return this.set_cron_schedule();
+        });
+    }
+
+    async bulks() {
+        try {
+            let getbulk = await new BulksDatabase().getBulk(this.current_campaign.id);
+            if (getbulk.length === 0) {
+                this.campaigns_runing = 'none';
+                await new CampaignsDatabase().updateCampaign(this.current_campaign.id, 'completed');
+                return;
+            }
+            let delay = this.current_campaign.delay * 1000;
+            if (this.current_campaign.status === 'waiting') await new CampaignsDatabase().updateCampaign(this.current_campaign.id, 'processing');
+            for (let i = 0; i < getbulk.length; i++) {
+                let row = getbulk[i];
+                if (this.campaigns_runing === 'none') break;
+                if (this.wacon === 'close') {
+                    this.campaigns_runing = 'none';
+                    break
+                }
+                if (this.campaigns_runing !== row.campaign_id) {
+                    // console.log('campaign changed');
+                    this.campaigns_runing = 'none';
+                    break
+                }
+
+                let client = new Client(this.velixs, row.receiver);
+                // if is not whatsapp number
+                if (!await client.isWhatsapp(row.receiver)) {
+                    await this.bulkdb.updateBulk(row.id, 'invalid');
+                    continue;
+                }
+
+                // console.log('Sending bulk to ' + row.receiver);
+                await this.sendMessage({ ilsya: client, row: row, message: this.current_campaign.message });
+
+                // if (i === getbulk.length - 1) {
+                //     this.campaigns_runing = 'none';
+                //     // console.log('Campaigns completed.');
+                //     // await new CampaignsDatabase().updateCampaign(this.current_campaign.id, 'completed');
+                //     break
+                // }
+                await new Promise(resolve => setTimeout(resolve, parseInt(delay)));
+            }
+        } catch (e) {
+        }
+    }
+
+    async sendMessage({ ilsya, row, message }) {
+        let data = JSON.parse(row.message);
+        switch (row.message_type) {
+            case "text":
+                ilsya.sendText(this.filterMessage(data.message, row)).then(() => {
+                    this.bulkdb.updateBulk(row.id, 'sent');
+                }).catch((e) => {
+                    console.log(e);
+                    this.bulkdb.updateBulk(row.id, 'failed');
+                });
+                break
+            case "media":
+                let opts = { file: { mimetype: `${data.media_type}` } };
+                ilsya.sendMedia(data.url, this.filterMessage(data.caption, row), opts).then(() => {
+                    this.bulkdb.updateBulk(row.id, 'sent');
+                }).catch((e) => {
+                    this.bulkdb.updateBulk(row.id, 'failed');
+                });
+                break;
+            case "button":
+                ilsya.sendButton({
+                    // image_url: data.image_url,
+                    text: this.filterMessage(data.message, row),
+                    footer: data.footer,
+                    buttons: data.buttons
+                }).then(() => {
+                    this.bulkdb.updateBulk(row.id, 'sent');
+                }).catch((e) => {
+                    this.bulkdb.updateBulk(row.id, 'failed');
+                });
+                break
+            case "list":
+                if (row.receiver.includes('@g.us')) {
+                    return this.bulkdb.updateBulk(row.id, 'invalid');
+                }
+                ilsya.sendListButton({
+                    // image_url: data.image_url,
+                    title: data.title,
+                    text: this.filterMessage(data.message, row),
+                    footer: data.footer,
+                    button_text: data.buttonText,
+                    sections: data.sections
+                }).then(() => {
+                    this.bulkdb.updateBulk(row.id, 'sent');
+                }).catch((e) => {
+                    this.bulkdb.updateBulk(row.id, 'failed');
+                });
+                break
+        }
+    }
+
+    async set_cron_schedule() {
+        this.current_campaign = await this.getCampaignsOn(this.session);
+        if (this.current_campaign === null) {
+            // console.log('Campaigns not found.');
+            this.campaigns_runing = 'none';
+            return;
+        }
+
+        if (this.campaigns_runing === this.current_campaign.id) return;
+        this.campaigns_runing = this.current_campaign.id;
+        let schedule = this.current_campaign.scheduled_at;
+        schedule = new Date(schedule).getTime();
+        // console.log(this.wacon);
+        let schedule_interval = setInterval(async () => {
+            if (this.campaigns_runing === 'none') {
+                return clearInterval(schedule_interval);
+            }
+
+            if (this.wacon === 'close') {
+                this.campaigns_runing = 'none';
+                return clearInterval(schedule_interval);
+            }
+
+            if (new Date().getTime() >= schedule) {
+                this.bulks();
+                // console.log(new Date().getTime() >= schedule);
+                return clearInterval(schedule_interval);
+            }
+            // console.log('Campaigns waiting.');
+            await new Promise(resolve => setTimeout(resolve, 5000));
+        }, 10000);
+    }
+
+    filterMessage(message, row){
+        while (message.includes('{name}')) {
+            message = message.replace('{name}', row.receiver_name);
+        }
+        while (message.includes('{number}')) {
+            message = message.replace('{number}', row.receiver);
+        }
+        // ex string {{Hai|Hello}} then random choose
+        const regex = (/\{\{(.+?)\}\}/g);
+        let matches;
+        while ((matches = regex.exec(message)) !== null) {
+            let random = Math.floor(Math.random() * matches[1].split('|').length);
+            message = message.replace(matches[0], matches[1].split('|')[random]);
+        }
+        return message
+    }
+}
+
+module.exports = Bulk;

@@ -1,6 +1,6 @@
-// SCRIPT BY ILSYA @ 2023
-// WEBSITE: https://velixs.com
-// GITHUB: https://github.com/ilsyaa
+// SCRIPT BY CYBEROREN @ 2023
+// WEBSITE: https://wa-cyberoren.my.id
+// GITHUB: https://github.com/JXXZY
 
 // 1.0.0
 

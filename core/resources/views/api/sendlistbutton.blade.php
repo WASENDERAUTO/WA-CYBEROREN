@@ -17,7 +17,7 @@
             <p>SendText is an API that allows you to send list button messages to WhatsApp numbers.</p>
             <span class="text-info">Endpoint :</span> {!! config('app.base_node') !!}/api/send-listmsg <br>
             <span class="text-info">Method :</span> POST <br>
-            <span class="text-info">Download Example PHP :</span> <a class="fw-bold" target="_blank" href="https://github.com/ilsyaa/example-lazygateway">Download</a><br>
+            <span class="text-info">Download Example PHP :</span> <a class="fw-bold" target="_blank" href="https://github.com/WASENDERAUTO/example-Warengateway">Download</a><br>
 
             <div class="card accordion-item mt-3">
                 <h2 class="accordion-header">
@@ -34,7 +34,7 @@
   "data": {
     "title": "Title Message",
     "message": "Message Content",
-    "footer": "WALazy - Ilsya",
+    "footer": "WAREN - JXXZY",
     "buttonText": "Click Me",
     "sections": [
         {
@@ -86,7 +86,7 @@
   "data": {
     "title": "Title Message",
     "message": "Message Content",
-    "footer": "WALazy - Ilsya",
+    "footer": "WAREN - JXXZY",
     "buttonText": "Click Me",
     "sections": [
         {

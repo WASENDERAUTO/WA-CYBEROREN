@@ -17,7 +17,7 @@
             <p>SendText is an API that allows you to send text messages to WhatsApp numbers.</p>
             <span class="text-info">Endpoint :</span> {!! config('app.base_node') !!}/api/send-message <br>
             <span class="text-info">Method :</span> POST <br>
-            <span class="text-info">Download Example PHP :</span> <a class="fw-bold" target="_blank" href="https://github.com/ilsyaa/example-lazygateway">Download</a><br>
+            <span class="text-info">Download Example PHP :</span> <a class="fw-bold" target="_blank" href="https://github.com/WASENDERAUTO/example-Warengateway">Download</a><br>
 
             <div class="card accordion-item mt-3">
                 <h2 class="accordion-header">
