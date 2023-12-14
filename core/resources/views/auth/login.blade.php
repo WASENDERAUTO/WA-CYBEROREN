@@ -56,7 +56,7 @@
                         <div class="app-brand justify-content-center mb-4 mt-2">
                             <a href="#" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo" style="height: unset;">
-                                    <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="walix">
+                                    <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="CYBEROREN">
                                 </span>
                             </a>
                         </div>
