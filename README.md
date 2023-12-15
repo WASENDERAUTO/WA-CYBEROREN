@@ -37,6 +37,15 @@ Keamanan dan privasi pengguna akan menjadi prioritas utama dalam pengembangan pr
 
 Proyek Pengembangan WhatsApp Sender berbasis chatbot dengan penggunaan API dan Micro Frontends adalah upaya untuk meningkatkan cara pengguna berkomunikasi dengan WhatsApp dan memaksimalkan potensi chatbot untuk berbagai keperluan. Dengan integrasi yang kuat, kecerdasan buatan, dan fokus pada pengalaman pengguna, proyek ini diharapkan dapat memberikan solusi yang inovatif dan efektif dalam berinteraksi dengan platform pesan populer seperti WhatsApp.
 
+# Kelebihan WAREN
+
+Aktif 24 Jam
+Multy Device (Number)
+Fitur banyak
+Anti Banned
+Simple & mudah digunakan
+
+
 ## ⚠️ Developers
   <div align="center">
   
