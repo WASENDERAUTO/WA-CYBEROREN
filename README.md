@@ -45,6 +45,20 @@ Fitur banyak
 Anti Banned
 Simple & mudah digunakan
 
+# Fitur WAREN
+
+Multy Device (Number)
+Phonebook
+Mendukung Message (Text, Media, Document, Button, ListButton)
+Mendukung import & export kontak
+Auto Responder & Webhook
+Campaigns (Pengiriman pesan masal dan terjadwal)
+Single Sender
+Rest API dan Dokumentasi API lengkap
+Plugins Integration
+File Manager
+Etc
+
 
 ## ⚠️ Developers
   <div align="center">
