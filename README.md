@@ -59,6 +59,15 @@ Plugins Integration
 File Manager
 Etc
 
+# F.A.Q
+Apa ada biaya langganan ?
+Ya ada, Untuk Langganan Bisa Wa Admin
+Apakah Aman ?
+Dijamin aman.
+Apakah ada lisensi lifetime ?
+Ya ada lisensi lifetime: Pembeli berhak menggunakan lisnesi sepanjang lifetime produk tersebut , yaitu selama produk tersebut masih tersedia untuk digunakan.
+Jika WhatsApp diperbarui, apakah produk ini akan tetap berfungsi?
+Jika WhatsApp diperbarui dan masih memungkinkan akses ke WhatsApp Web melalui library pengambilan data, maka produk akan diperbarui.
 
 ## ⚠️ Developers
   <div align="center">
