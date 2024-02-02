@@ -1,6 +1,6 @@
-// SCRIPT BY CYBEROREN @ 2023
+// SCRIPT BY jxxzy@ 2023
 // WEBSITE: https://wa-cyberoren.my.id
-// GITHUB: https://github.com/JXXZY
+// GITHUB: https://github.com/jxxzy
 
 // 1.0.0
 

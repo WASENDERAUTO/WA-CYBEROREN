@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>LOGIN - CYBEROREN GATEWAY</title>
+    <title>LOGIN - WAREN GATEWAY</title>
 
     <meta name="description" content="LAZY GATEWAY" />
 
@@ -56,7 +56,7 @@
                         <div class="app-brand justify-content-center mb-4 mt-2">
                             <a href="#" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo" style="height: unset;">
-                                    <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="CYBEROREN">
+                                    <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="walix">
                                 </span>
                             </a>
                         </div>

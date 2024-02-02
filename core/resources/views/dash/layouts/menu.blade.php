@@ -4,7 +4,7 @@
             <span class="app-brand-logo demo" style="height: unset">
                 <img style="height: 30px" src="{!! asset('assets/img/logo.png') !!}" alt="walix">
             </span>
-            <span class="app-brand-text demo menu-text fw-bold">CYBEROREN</span>
+            <span class="app-brand-text demo menu-text fw-bold">WAREN</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -110,7 +110,7 @@
             </li>
         @endif
         <li class="menu-item">
-            <a href="https://wasenderauto.github.io/Proposal-P3/" class="menu-link">
+            <a href="https://wasenderauto.github.io/example-Warengateway/" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-code" style="margin-bottom: 2px;"></i>
                 <div data-i18n="Version 3.0.0">Version 4.x</div>
                 <div class="badge bg-label-success rounded-pill ms-auto">Current</div>
