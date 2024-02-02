@@ -1,0 +1,4 @@
+[09-Dec-2023 17:03:06 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/wacybero/public_html/waren/install/db.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/wacybero/public_html/waren/install/db.php on line 10
